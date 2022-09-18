@@ -1,0 +1,24 @@
+configuration {
+    font: "Fira Code";
+    show-icons: true;
+    icon-theme: "Papirus";
+    disable-history
+    fullscreen: false;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+}
+
+@import "colors.rasi"
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    text-color: @fg;
+    border: 0px 0px 0px 0px;
+    border-radius: 0px;
+    width: 500px;
+    location: center;
+    x-offset: 0;
+    y-offset: 0;
+
+}

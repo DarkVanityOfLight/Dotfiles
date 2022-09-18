@@ -1,0 +1,138 @@
+configuration {
+    font: "Fira Code";
+    show-icons: true;
+    icon-theme: "Papirus";
+    fullscreen: false;
+    hide-scrollbar: true;
+    sidebar-mode: false;
+}
+
+@import "colors.rasi"
+
+window {
+    transparency: "real";
+    background-color: @bg;
+    text-color: @fg;
+    border: 0px 0px 0px 0px;
+    border-radius: 0px;
+    width: 500px;
+    location: center;
+    x-offset: 0;
+    y-offset: 0;
+
+}
+
+/*
+* The Drun prompt
+*/
+prompt {
+    enabled: true;
+    padding: 0px;
+    background-color: @bg;
+    text-color: @fg;
+}
+
+/*
+* The Search bar
+*/
+entry {
+    background-color: @bg;
+    text-color: @fg;
+    placeholder-color: @fg;
+    expand: true;
+    horizontal-align: 0;
+    placeholder: "Search...";
+    padding: 0px 0px 0px 0px;
+    blink: true;
+
+}
+
+/* 
+*The search bar + the prompt
+*/
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg;
+    text-color: @fg;
+    expand: false;
+    border: 0px 0px 1px 0px;
+    border-color: @fg;
+    margin: 0px;
+    padding: 10px;
+}
+
+/*
+* Pack it into a list
+*/
+listview {
+    background-color: @bg;
+    padding: 0px;
+    columns: 1;
+    lines: 6;
+    spacing: 5px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+}
+
+/*
+* Pack it into one box
+*/
+mainbox {
+    background-color: @bg;
+    border: 0px;
+    border-radius: 0px;
+    border-color: @bg;
+    children: [ inputbar, listview ];
+    spacing: 5px;
+    padding: 5px;
+
+}
+
+/*
+*Space between applications
+*/
+element {
+    background-color: @bg;
+    background: @bg;
+    text-color: @fg;
+    orientation: horizontal;
+    border-radius: 0px;
+    padding: 8px;
+}
+/*
+* Application icons
+*/
+element-icon {
+    background-color: @bg;
+    size: 24px;
+    border: 0px;
+}
+
+/*
+* Application name
+*/
+element-text {
+    background-color: @bg;
+    text-color: @fg;
+    expand: true;
+    horizontal-align: 0;
+    vertical-align: 0.5;
+    margin: 0px 2.5px 0px 2.5px;
+}
+
+element-text selected {
+    background-color: @sl;
+}
+
+element-icon selected {
+    background-color: @sl;
+}
+
+element selected {
+    background-color: @sl;
+    text-color: @at;
+    border: 0px 0px 0px 0px;
+    border-radius: 0px;
+    border-color: @fg;
+}
