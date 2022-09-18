@@ -1,0 +1,16 @@
+format = """$directory$line_breakλ """
+add_newline = false
+right_format = """$sudo$time"""
+
+[line_break]
+disabled = false
+
+[time]
+disabled = false
+format = "[$time]($style)"
+style = "bold fg:#7d53de"
+
+[sudo]
+disabled = false
+symbol = "Σ "
+format = "[$symbol]($style)"
