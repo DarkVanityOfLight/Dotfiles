@@ -1,7 +1,5 @@
 local Plug = vim.fn['plug#']
 
 vim.call('plug#begin', '~/.config/nvim/plugged')
-
-Plug 'EdenEast/nightfox.nvim'
-
+Plug 'itchyny/lightline.vim'
 vim.call('plug#end')
